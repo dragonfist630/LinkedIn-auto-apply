@@ -1,0 +1,190 @@
+# =============================================================================
+# PERSONAL PROFILE - LinkedIn Auto Job Applier (Claude Agent)
+# =============================================================================
+# This file contains all personal information used by the Claude agent skill
+# to automatically answer LinkedIn Easy Apply questions.
+#
+# Instructions:
+#   - Fill in every field accurately. The agent reads this file before
+#     answering any application question.
+#   - Use quotes only where shown. YAML interprets Yes/No as booleans,
+#     so wrap them in quotes when they are literal answer strings.
+#   - Leave a field as "" or ~ (null) if you genuinely don't have a value.
+# =============================================================================
+
+
+# ---------------------
+#  IDENTITY & CONTACT
+# ---------------------
+identity:
+  first_name: "Nayan"
+  middle_name: "Amrut"
+  last_name: "Gadhari"
+  full_name: "Nayan Amrut Gadhari"       # Auto-derived, but set explicitly for clarity
+  phone_number: "07768271808"
+  email: "gadharinayan@gmail.com"
+
+# ---------------------
+#  ADDRESS & LOCATION
+# ---------------------
+location:
+  current_city: ""                        # Leave empty to auto-fill with job's location
+  street: ""
+  state: ""
+  zipcode: ""
+  country: "United Kingdom"
+
+# ---------------------
+#  WORK AUTHORIZATION
+# ---------------------
+work_authorization:
+  require_visa_sponsorship: "Yes"         # "Yes" or "No" - Do you need visa sponsorship now or in the future?
+  us_citizenship: "Non-citizen allowed to work for any employer"
+  # Valid options:
+  #   "U.S. Citizen/Permanent Resident"
+  #   "Non-citizen allowed to work for any employer"
+  #   "Non-citizen allowed to work for current employer"
+  #   "Non-citizen seeking work authorization"
+  #   "Canadian Citizen/Permanent Resident"
+  #   "Other"
+
+# ---------------------
+#  EQUAL OPPORTUNITY
+# ---------------------
+equal_opportunity:
+  ethnicity: "Decline"                    # "Decline", "Hispanic/Latino", "Asian", "Black or African American", "White", "Other", etc.
+  gender: "Decline"                       # "Male", "Female", "Other", "Decline"
+  disability_status: "Decline"            # "Yes", "No", "Decline"
+  veteran_status: "Decline"              # "Yes", "No", "Decline"
+
+# ---------------------
+#  EXPERIENCE & SKILLS
+# ---------------------
+experience:
+  years_of_experience: "3"                # Total years of professional experience (as a string for form fields)
+  current_experience: 3                   # Integer used to compare against job requirements
+  did_masters: true                       # Set true if you hold a Master's degree (adds +2 years buffer for experience checks)
+  recent_employer: "Qualitest @meta"
+  confidence_level: "8"                   # Self-rating on a scale of 1-10 for technical skills
+
+# ---------------------
+#  COMPENSATION
+# ---------------------
+compensation:
+  desired_salary: 60000                   # Annual desired salary in local currency (number, no quotes)
+  current_ctc: 60000                      # Current annual compensation (number, no quotes)
+  # The agent auto-derives monthly and lakhs formats when questions ask for them.
+
+# ---------------------
+#  NOTICE PERIOD
+# ---------------------
+notice_period:
+  days: 30                                # Notice period in days. Agent auto-converts to weeks/months as needed.
+
+# ---------------------
+#  ONLINE PRESENCE
+# ---------------------
+online_presence:
+  linkedin: "https://www.linkedin.com/in/nayangadhari/"
+  website: "https://github.com/dragonfist630"     # Portfolio, GitHub, blog, etc.
+
+# ---------------------
+#  PROFESSIONAL SUMMARY
+# ---------------------
+professional_summary:
+  headline: "Full-Stack Software Engineer | React . TypeScript . Node | QA Automation"
+  summary: |
+    I'm a Senior Software Engineer at Amazon with Masters in CS and 4+ years
+    of experience in developing and maintaining Full Stack Web applications
+    and cloud solutions. Specialized in React, Node.js, and Python.
+  cover_letter: |
+    Dear Hiring Manager,
+
+    I am writing to express my strong interest in this position. With over 3 years
+    of professional experience in full-stack software development, I bring a proven
+    track record of building scalable web applications using React, TypeScript,
+    Node.js, and Python.
+
+    At my current role with Qualitest (contracted to Meta), I have honed my skills
+    in QA automation and full-stack development. I hold a Master's degree in
+    Computer Science which has given me a strong theoretical foundation to
+    complement my practical experience.
+
+    I am excited about the opportunity to contribute to your team and am confident
+    that my technical skills and collaborative approach make me a strong fit for
+    this role.
+
+    Kind regards,
+    Nayan Gadhari
+  user_information_all: |
+    Name: Nayan Amrut Gadhari
+    Location: United Kingdom
+    Phone: 07768271808
+    Email: gadharinayan@gmail.com
+    LinkedIn: https://www.linkedin.com/in/nayangadhari/
+    GitHub: https://github.com/dragonfist630
+
+    Education: Master's degree in Computer Science
+    Total Experience: 3+ years
+    Current Role: QA Automation Engineer at Qualitest (contracted to Meta)
+    Core Skills: React, TypeScript, Node.js, Python, JavaScript, Full-Stack Development, QA Automation
+    Visa: Requires sponsorship
+
+    Summary: Senior Software Engineer with 3+ years of experience building
+    and maintaining full-stack web applications and cloud solutions.
+    Specialized in React, Node.js, and Python. Strong background in
+    QA automation and testing methodologies.
+
+# ---------------------
+#  JOB SEARCH CONFIG
+# ---------------------
+job_search:
+  search_terms:
+    - "Software Developer"
+    - "Software Engineer"
+    - "Frontend Developer"
+    - "Front End Developer"
+    - "React Developer"
+    - "JavaScript Developer"
+    - "Full Stack Developer"
+    - "Web Developer"
+    - "Nodejs Developer"
+  search_location: "United Kingdom"
+  switch_number: 30                       # Switch to next search term after this many applications
+
+  filters:
+    sort_by: "Most relevant"              # "Most recent", "Most relevant", or ""
+    date_posted: "Past 24 hours"          # "Any time", "Past month", "Past week", "Past 24 hours", or ""
+    salary: ""
+    easy_apply_only: true
+    experience_level: []                  # "Internship", "Entry level", "Associate", "Mid-Senior level", "Director", "Executive"
+    job_type:
+      - "Contract"
+      - "Full-time"
+    on_site: []                           # "On-site", "Remote", "Hybrid"
+    companies: []
+    location: []
+    industry: []
+    job_function: []
+    job_titles: []
+    benefits: []
+    commitments: []
+    under_10_applicants: false
+    in_your_network: false
+    fair_chance_employer: false
+
+# ---------------------
+#  SCREENING RULES
+# ---------------------
+screening:
+  bad_words: []                           # Skip jobs whose description contains any of these words
+  about_company_bad_words: []             # Skip companies whose "About" contains these words
+  about_company_good_words: []            # If found, skip blacklist checking for that company
+  security_clearance: false               # Set true only if you have security clearance
+  max_experience_gap: 2                   # Extra years above your experience before skipping (masters adds +2)
+
+# ---------------------
+#  RESUME
+# ---------------------
+resume:
+  default_path: "all resumes/#Resume - Nayan.pdf"

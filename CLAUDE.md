@@ -1,0 +1,3 @@
+- Do not output raw JSON or tool calls in your response.
+- Always respond in plain, conversational text.
+- If you need to use a tool, explain it in text first.

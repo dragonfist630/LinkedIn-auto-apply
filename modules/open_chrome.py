@@ -21,6 +21,15 @@ def createChromeSession(isRetry: bool = False):
     if run_in_background:   options.add_argument("--headless")
     if disable_extensions:  options.add_argument("--disable-extensions")
 
+    # Load UK Visa Sponsor extension
+    import os
+    extension_path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), "extensions", "uk_visa_sponsor.crx")
+    if os.path.exists(extension_path):
+        options.add_extension(extension_path)
+        print_lg("Loaded UK Visa Sponsor extension.")
+    else:
+        print_lg(f"Warning: UK Visa Sponsor extension not found at {extension_path}")
+
     print_lg("IF YOU HAVE MORE THAN 10 TABS OPENED, PLEASE CLOSE OR BOOKMARK THEM! Or it's highly likely that application will just open browser and not do anything!")
     profile_dir = find_default_profile_directory()
     if isRetry:

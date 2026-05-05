@@ -304,7 +304,12 @@ def get_job_main_details(job: WebElement, blacklisted_companies: set, rejected_j
             skip = True
             print_lg(f'Already applied to "{title} | {company}" job. Job ID: {job_id}!')
     except: pass
-    try: 
+    try:
+        job.find_element(By.CSS_SELECTOR, 'span.ukVisaBadge[sbadge="UK Visa Sponsor"]')
+    except:
+        print_lg(f'Skipping "{title} | {company}" — no UK Visa Sponsor badge. Job ID: {job_id}!')
+        skip = True
+    try:
         if not skip: job_details_button.click()
     except Exception as e:
         print_lg(f'Failed to click "{title} | {company}" job on details button. Job ID: {job_id}!') 
