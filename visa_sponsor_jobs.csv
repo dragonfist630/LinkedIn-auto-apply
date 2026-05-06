@@ -1,26 +1,87 @@
-job_id,title,company,location,link,search_term,collected_at
-4410748980,Software Engineer,Harvey Nash,,https://www.linkedin.com/jobs/view/4410748980,Software Developer,2026-05-06 01:26:52
-4408414023,Software Engineer,mthree,,https://www.linkedin.com/jobs/view/4408414023,Software Developer,2026-05-06 01:26:54
-4408195772,Software Engineer (Python/React) - Up to 140k + Bonus,Hunter Bond,,https://www.linkedin.com/jobs/view/4408195772,Software Developer,2026-05-06 01:26:57
-4408415841,Full Stack Engineer,develop,,https://www.linkedin.com/jobs/view/4408415841,Software Developer,2026-05-06 01:26:59
-4410581113,Software Developer,Michael Page,,https://www.linkedin.com/jobs/view/4410581113,Software Developer,2026-05-06 01:27:05
-4409167512,SOFTWARE ENGINEER (3 month contract),Sphere,,https://www.linkedin.com/jobs/view/4409167512,Software Developer,2026-05-06 01:27:10
-4403947356,Software Engineer (Applied AI),Euphoric,,https://www.linkedin.com/jobs/view/4403947356,Software Developer,2026-05-06 01:27:11
-4408400930,UI Engineer,mthree,,https://www.linkedin.com/jobs/view/4408400930,Software Developer,2026-05-06 01:27:23
-4408173312,"Software Developer (React) - Up to £120,000 + Bonus + Package",Hunter Bond,,https://www.linkedin.com/jobs/view/4408173312,Software Developer,2026-05-06 01:27:25
-4408431796,Full Stack Engineer,develop,,https://www.linkedin.com/jobs/view/4408431796,Software Developer,2026-05-06 01:27:26
-4409339351,Full Stack Engineer,Space Executive,,https://www.linkedin.com/jobs/view/4409339351,Software Developer,2026-05-06 01:27:31
-4408404544,Frontend Engineer,Qurated,,https://www.linkedin.com/jobs/view/4408404544,Software Developer,2026-05-06 01:27:43
-4408420259,Full Stack Engineer,Stealth iT Consulting,,https://www.linkedin.com/jobs/view/4408420259,Software Developer,2026-05-06 01:27:48
-4408166855,Full Stack Engineer,Avanade,,https://www.linkedin.com/jobs/view/4408166855,Software Developer,2026-05-06 01:27:51
-4410572850,Frontend Engineer,Vanguard,,https://www.linkedin.com/jobs/view/4410572850,Software Developer,2026-05-06 01:27:54
-4408192823,"React Developer - Up to £180,000 + Bonus + Package",Hunter Bond,,https://www.linkedin.com/jobs/view/4408192823,Software Developer,2026-05-06 01:28:06
-4408437597,Full Stack Engineer,Atos,,https://www.linkedin.com/jobs/view/4408437597,Software Developer,2026-05-06 01:28:09
-4353476730,Full Stack Developer,Version 1,,https://www.linkedin.com/jobs/view/4353476730,Software Developer,2026-05-06 01:28:12
-4410597430,Full Stack Engineer,CHOUCHOU EUROPE LTD,,https://www.linkedin.com/jobs/view/4410597430,Software Developer,2026-05-06 01:28:14
-4409357961,Python Engineer,Lendable,,https://www.linkedin.com/jobs/view/4409357961,Software Developer,2026-05-06 01:28:19
-4408421199,Frontend developer Nextjs,Gazelle Global,,https://www.linkedin.com/jobs/view/4408421199,Software Developer,2026-05-06 01:28:20
-4410519655,Full Stack Engineer (Python / React),SGI,,https://www.linkedin.com/jobs/view/4410519655,Software Developer,2026-05-06 01:28:25
-4409363730,Graduate,Dabster,,https://www.linkedin.com/jobs/view/4409363730,Software Developer,2026-05-06 01:28:27
-4408429733,Full Stack Engineer,Reelables,,https://www.linkedin.com/jobs/view/4408429733,Software Developer,2026-05-06 01:28:36
-4410593573,AI & Data Engineer,Source,,https://www.linkedin.com/jobs/view/4410593573,Software Developer,2026-05-06 01:28:38
+job_id, title, company, location, link, search_term, collected_at
+4410748980, Software Engineer, Harvey Nash, , https://www.linkedin.com/jobs/view/4410748980, Software Developer, 2026-05-06 01:35:18
+4408400930, UI Engineer, mthree, , https://www.linkedin.com/jobs/view/4408400930, Software Developer, 2026-05-06 01:35:20
+4408195772, Software Engineer (Python/React) - Up to 140k + Bonus, Hunter Bond, , https://www.linkedin.com/jobs/view/4408195772, Software Developer, 2026-05-06 01:35:22
+4408415841, Full Stack Engineer, develop, , https://www.linkedin.com/jobs/view/4408415841, Software Developer, 2026-05-06 01:35:24
+4410581113, Software Developer, Michael Page, , https://www.linkedin.com/jobs/view/4410581113, Software Developer, 2026-05-06 01:35:35
+4409167512, SOFTWARE ENGINEER (3 month contract), Sphere, , https://www.linkedin.com/jobs/view/4409167512, Software Developer, 2026-05-06 01:35:39
+4403947356, Software Engineer (Applied AI), Euphoric, , https://www.linkedin.com/jobs/view/4403947356, Software Developer, 2026-05-06 01:35:40
+4408431796, Full Stack Engineer, develop, , https://www.linkedin.com/jobs/view/4408431796, Software Developer, 2026-05-06 01:35:48
+4408192823, React Developer - Up to £180,000 + Bonus + Package, Hunter Bond, , https://www.linkedin.com/jobs/view/4408192823, Software Developer, 2026-05-06 01:35:49
+4408414023, Software Engineer, mthree, , https://www.linkedin.com/jobs/view/4408414023, Software Developer, 2026-05-06 01:35:51
+4409339351, Full Stack Engineer, Space Executive, , https://www.linkedin.com/jobs/view/4409339351, Software Developer, 2026-05-06 01:36:00
+4408166855, Full Stack Engineer, Avanade, , https://www.linkedin.com/jobs/view/4408166855, Software Developer, 2026-05-06 01:36:07
+4408404544, Frontend Engineer, Qurated, , https://www.linkedin.com/jobs/view/4408404544, Software Developer, 2026-05-06 01:36:08
+4409363730, Graduate, Dabster, , https://www.linkedin.com/jobs/view/4409363730, Software Developer, 2026-05-06 01:36:22
+4408437597, Full Stack Engineer, Atos, , https://www.linkedin.com/jobs/view/4408437597, Software Developer, 2026-05-06 01:36:24
+4408173312, Software Developer (React) - Up to £120,000 + Bonus + Package, Hunter Bond, , https://www.linkedin.com/jobs/view/4408173312, Software Developer, 2026-05-06 01:36:31
+4353476730, Full Stack Developer, Version 1, , https://www.linkedin.com/jobs/view/4353476730, Software Developer, 2026-05-06 01:36:35
+4410597430, Full Stack Engineer, CHOUCHOU EUROPE LTD, , https://www.linkedin.com/jobs/view/4410597430, Software Developer, 2026-05-06 01:36:38
+4408454419, Full Stack Engineer, Atos, , https://www.linkedin.com/jobs/view/4408454419, Software Developer, 2026-05-06 01:36:41
+4409357961, Python Engineer, Lendable, , https://www.linkedin.com/jobs/view/4409357961, Software Developer, 2026-05-06 01:36:42
+4408421199, Frontend developer Nextjs, Gazelle Global, , https://www.linkedin.com/jobs/view/4408421199, Software Developer, 2026-05-06 01:36:43
+4410572850, Frontend Engineer, Vanguard, , https://www.linkedin.com/jobs/view/4410572850, Software Developer, 2026-05-06 01:36:45
+4410519655, Full Stack Engineer (Python / React), SGI, , https://www.linkedin.com/jobs/view/4410519655, Software Developer, 2026-05-06 01:36:49
+4410593573, AI & Data Engineer, Source, , https://www.linkedin.com/jobs/view/4410593573, Software Developer, 2026-05-06 01:36:57
+4408429733, Full Stack Engineer, Reelables, , https://www.linkedin.com/jobs/view/4408429733, Software Developer, 2026-05-06 01:36:59
+4408196930, Software Engineer - Up to £400k + Bonus - London, Hunter Bond, , https://www.linkedin.com/jobs/view/4408196930, Software Developer, 2026-05-06 01:37:19
+4410714579, Backend developer, Front Row, , https://www.linkedin.com/jobs/view/4410714579, Software Developer, 2026-05-06 01:37:31
+4409366643, Junior Java Developer, Information Tech Consultants, , https://www.linkedin.com/jobs/view/4409366643, Software Developer, 2026-05-06 01:37:35
+4408993087, Junior Software Engineer, ai4process, , https://www.linkedin.com/jobs/view/4408993087, Software Developer, 2026-05-06 01:37:38
+4401956576, Python Developer, mthree, , https://www.linkedin.com/jobs/view/4401956576, Software Developer, 2026-05-06 01:37:40
+4409375238, Senior React Developer, Undisclosed, , https://www.linkedin.com/jobs/view/4409375238, Software Developer, 2026-05-06 01:37:48
+4410729887, Software Development Engineer, Ring, Amazon, , https://www.linkedin.com/jobs/view/4410729887, Software Developer, 2026-05-06 01:37:50
+4408440099, AI Engineer - Up To £100,000 P/A - London - Hybrid, Hunter Bond, , https://www.linkedin.com/jobs/view/4408440099, Software Developer, 2026-05-06 01:38:00
+4408195192, Software Engineer, intro, , https://www.linkedin.com/jobs/view/4408195192, Software Developer, 2026-05-06 01:38:08
+4409369283, UX Front End Developer - Security & Intelligence, hackajob, , https://www.linkedin.com/jobs/view/4409369283, Software Developer, 2026-05-06 01:38:13
+4408425984, Back-end Developer (Java &Spring Boot/Python), Methods, , https://www.linkedin.com/jobs/view/4408425984, Software Developer, 2026-05-06 01:38:20
+4410762717, Graduate Trainee, Software Development, Marex, , https://www.linkedin.com/jobs/view/4410762717, Software Developer, 2026-05-06 01:38:25
+4410577722, AI Engineer Intern, Aspect, , https://www.linkedin.com/jobs/view/4410577722, Software Developer, 2026-05-06 01:38:26
+4233791331, Software Engineer, Workers Builds & Automation, Cloudflare, , https://www.linkedin.com/jobs/view/4233791331, Software Developer, 2026-05-06 01:38:28
+4410701212, Remote Software Engineer, Turing, , https://www.linkedin.com/jobs/view/4410701212, Software Developer, 2026-05-06 01:38:31
+4401098468, Software Engineer (NodeJS, Typescript), Diligent, , https://www.linkedin.com/jobs/view/4401098468, Software Developer, 2026-05-06 01:38:34
+4408446043, Python Software Engineer – Up to £150,000 + Bonus & Benefits – London, Hunter Bond, , https://www.linkedin.com/jobs/view/4408446043, Software Developer, 2026-05-06 01:38:40
+4409336619, Python Developer, Station, , https://www.linkedin.com/jobs/view/4409336619, Software Developer, 2026-05-06 01:38:51
+4410734738, Software Development Engineer, Ring, Amazon, , https://www.linkedin.com/jobs/view/4410734738, Software Developer, 2026-05-06 01:38:54
+4410714602, Backend Engineer, Pleo, , https://www.linkedin.com/jobs/view/4410714602, Software Developer, 2026-05-06 01:39:04
+4409398731, Software Developer, Royal Papworth Hospital NHS Foundation Trust, , https://www.linkedin.com/jobs/view/4409398731, Software Developer, 2026-05-06 01:39:11
+4406277962, Software Engineer/Full Stack Developer, Newcastle University, , https://www.linkedin.com/jobs/view/4406277962, Software Developer, 2026-05-06 01:39:14
+4408179319, Software Developer (Python) - Up to £140,000 + Bonus + Package, Hunter Bond, , https://www.linkedin.com/jobs/view/4408179319, Software Developer, 2026-05-06 01:39:25
+4408436283, AI Engineer, Stott and May, , https://www.linkedin.com/jobs/view/4408436283, Software Developer, 2026-05-06 01:39:34
+4410702937, Senior Software Engineer, Investigo, , https://www.linkedin.com/jobs/view/4410702937, Software Developer, 2026-05-06 01:39:38
+4409333573, AI Engineer, Space Executive, , https://www.linkedin.com/jobs/view/4409333573, Software Developer, 2026-05-06 01:39:43
+4408995883, Flutter Developer, Addition, , https://www.linkedin.com/jobs/view/4408995883, Software Developer, 2026-05-06 01:39:48
+4410743030, Back-End Intern, JustPark, , https://www.linkedin.com/jobs/view/4410743030, Software Developer, 2026-05-06 01:39:53
+4408403718, Graduate Software Engineer / Quant Developer / Quant Researcher - Up to £180,000 + Bonus + Package, Hunter Bond, , https://www.linkedin.com/jobs/view/4408403718, Software Developer, 2026-05-06 01:40:06
+4408174098, Golang Engineer, PRACYVA, , https://www.linkedin.com/jobs/view/4408174098, Software Developer, 2026-05-06 01:40:12
+4408432699, Senior Full Stack Developer, Glite Tech, , https://www.linkedin.com/jobs/view/4408432699, Software Developer, 2026-05-06 01:40:16
+4409364653, Partner Engineer, YouTube, UKI, Google, , https://www.linkedin.com/jobs/view/4409364653, Software Developer, 2026-05-06 01:40:17
+4410592778, Remote Software Developer, Turing, , https://www.linkedin.com/jobs/view/4410592778, Software Developer, 2026-05-06 01:40:19
+4401566419, Full Stack Developer – AI & Cloud Innovation, CGI, , https://www.linkedin.com/jobs/view/4401566419, Software Developer, 2026-05-06 01:40:20
+4410712600, Backend Engineer, Pleo, , https://www.linkedin.com/jobs/view/4410712600, Software Developer, 2026-05-06 01:40:22
+4409371548, AI Engineer, Capstone Investment Advisors, , https://www.linkedin.com/jobs/view/4409371548, Software Developer, 2026-05-06 01:40:24
+4170831864, Intermediate Java Software Engineer, Version 1, , https://www.linkedin.com/jobs/view/4170831864, Software Developer, 2026-05-06 01:40:25
+4388987304, Development Support: Tools, Rockstar Games, , https://www.linkedin.com/jobs/view/4388987304, Software Developer, 2026-05-06 01:40:32
+4405280827, Full-Stack Software Engineer, Mobile Apps, Hiya Inc., , https://www.linkedin.com/jobs/view/4405280827, Software Developer, 2026-05-06 01:40:36
+4408411473, # React Native Mobile Developer, T. Rowe Price, , https://www.linkedin.com/jobs/view/4408411473, Software Developer, 2026-05-06 01:40:37
+4400840007, AI Research Engineer, Wave Group, , https://www.linkedin.com/jobs/view/4400840007, Software Developer, 2026-05-06 01:40:39
+4401623924, Full Stack Developer (C#/Angular) – Leading Global Hedge Fund – Excellent Compensation + Benefits, Mondrian Alpha, , https://www.linkedin.com/jobs/view/4401623924, Software Developer, 2026-05-06 01:40:40
+4410781888, Senior Frontend Designer, Lunar Energy, , https://www.linkedin.com/jobs/view/4410781888, Software Developer, 2026-05-06 01:40:43
+4410730566, Fullstack Software Engineer, Ocean Infinity, , https://www.linkedin.com/jobs/view/4410730566, Software Developer, 2026-05-06 01:40:44
+4408408850, Junior C++ Engineer (Low-Level) - up to £110k base + Bonus, Hunter Bond, , https://www.linkedin.com/jobs/view/4408408850, Software Developer, 2026-05-06 01:40:52
+4408989727, Senior Frontend Developer, TransPerfect, , https://www.linkedin.com/jobs/view/4408989727, Software Developer, 2026-05-06 01:41:00
+4409370347, Lead Frontend Engineer | React | Next.JS | Typescript | CI/CD | Frontend | Hybrid, London, Enigma, , https://www.linkedin.com/jobs/view/4409370347, Software Developer, 2026-05-06 01:41:01
+4409394636, Software Engineer 3, myenergi, , https://www.linkedin.com/jobs/view/4409394636, Software Developer, 2026-05-06 01:41:06
+4410712450, Senior Software Engineer, Innovate, , https://www.linkedin.com/jobs/view/4410712450, Software Developer, 2026-05-06 01:41:07
+4408985730, Lead UI Developer, GCS, , https://www.linkedin.com/jobs/view/4408985730, Software Developer, 2026-05-06 01:41:12
+4408407412, Junior Test Engineer, develop, , https://www.linkedin.com/jobs/view/4408407412, Software Developer, 2026-05-06 01:41:21
+4409306282, Java Engineer (FIX / Trading APIs), Morgan McKinley, , https://www.linkedin.com/jobs/view/4409306282, Software Developer, 2026-05-06 01:41:25
+4408179292, Software Developer (C++) – Up to £120,000 + Bonus + Package, Hunter Bond, , https://www.linkedin.com/jobs/view/4408179292, Software Developer, 2026-05-06 01:41:35
+4408180258, Associate Software Engineer (C#/.NET), TP ICAP, , https://www.linkedin.com/jobs/view/4408180258, Software Developer, 2026-05-06 01:41:43
+4352754910, DevSecOps Engineer, Lockheed Martin, , https://www.linkedin.com/jobs/view/4352754910, Software Developer, 2026-05-06 01:41:45
+4409306808, Python Developer, Hexaware Technologies, , https://www.linkedin.com/jobs/view/4409306808, Software Developer, 2026-05-06 01:41:46
+4408991968, PHP Engineer, Lendable, , https://www.linkedin.com/jobs/view/4408991968, Software Developer, 2026-05-06 01:41:52
+4409354109, AI Engineer (Copilot), Sky, , https://www.linkedin.com/jobs/view/4409354109, Software Developer, 2026-05-06 01:41:56
+4410551507, Senior Backend Developer, Tact, , https://www.linkedin.com/jobs/view/4410551507, Software Developer, 2026-05-06 01:41:57
+4396390582, Software Engineer - React Native, Aristocrat, , https://www.linkedin.com/jobs/view/4396390582, Software Developer, 2026-05-06 01:42:00
+4409373197, CRO Engineer / Specialist - Contract, Harnham, , https://www.linkedin.com/jobs/view/4409373197, Software Developer, 2026-05-06 01:42:03

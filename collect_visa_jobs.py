@@ -286,19 +286,25 @@ def collect_visa_jobs():
     return collected_jobs
 
 
+CSV_FIELDNAMES = ["job_id", "title", "company", "location", "link", "search_term", "collected_at"]
+
+
+def write_csv(filepath, jobs):
+    """Write jobs to CSV with ', ' (comma + space) between columns."""
+    with open(filepath, 'w', encoding='utf-8') as f:
+        f.write(", ".join(CSV_FIELDNAMES) + "\n")
+        for job in jobs:
+            row = [str(job.get(field, "")) for field in CSV_FIELDNAMES]
+            f.write(", ".join(row) + "\n")
+
+
 def save_to_csv(jobs):
     """Save collected jobs to CSV."""
     if not jobs:
         print_lg("No visa sponsor jobs found.")
         return
 
-    fieldnames = ["job_id", "title", "company", "location", "link", "search_term", "collected_at"]
-
-    with open(OUTPUT_CSV, 'w', newline='', encoding='utf-8') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-        writer.writerows(jobs)
-
+    write_csv(OUTPUT_CSV, jobs)
     print_lg(f"\nSaved {len(jobs)} jobs to {OUTPUT_CSV}")
 
 
@@ -367,24 +373,16 @@ def validate_against_gov_register(jobs):
             print_lg(f"  {i}. {job['title']} | {job['company']}")
             print_lg(f"     {job['link']}")
 
-    fieldnames = ["job_id", "title", "company", "location", "link", "search_term", "collected_at"]
-
     # Save verified jobs
     if verified:
         verified_csv = "visa_sponsor_jobs_verified.csv"
-        with open(verified_csv, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerows(verified)
+        write_csv(verified_csv, verified)
         print_lg(f"\nSaved {len(verified)} gov-verified jobs to {verified_csv}")
 
     # Save not-found jobs
     if not_found:
         not_verified_csv = "not_visa_sponsor_jobs.csv"
-        with open(not_verified_csv, 'w', newline='', encoding='utf-8') as f:
-            writer = csv.DictWriter(f, fieldnames=fieldnames)
-            writer.writeheader()
-            writer.writerows(not_found)
+        write_csv(not_verified_csv, not_found)
         print_lg(f"Saved {len(not_found)} unverified jobs to {not_verified_csv}")
 
 
