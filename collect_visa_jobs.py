@@ -302,6 +302,92 @@ def save_to_csv(jobs):
     print_lg(f"\nSaved {len(jobs)} jobs to {OUTPUT_CSV}")
 
 
+GOV_SPONSOR_CSV = os.path.join(os.path.dirname(os.path.abspath(__file__)), "2026-05-05_-_Worker_and_Temporary_Worker.csv")
+
+
+def load_gov_sponsors() -> set:
+    """Load UK government sponsor register company names into a set (lowercased, stripped)."""
+    sponsors = set()
+    try:
+        with open(GOV_SPONSOR_CSV, 'r', encoding='utf-8') as f:
+            reader = csv.DictReader(f)
+            for row in reader:
+                name = row.get("Organisation Name", "").strip().strip('"').lower()
+                if name:
+                    sponsors.add(name)
+        print_lg(f"Loaded {len(sponsors)} companies from UK gov sponsor register.")
+    except FileNotFoundError:
+        print_lg(f"WARNING: Gov sponsor CSV not found at {GOV_SPONSOR_CSV}")
+    except Exception as e:
+        print_lg(f"Error loading gov sponsor CSV: {e}")
+    return sponsors
+
+
+def validate_against_gov_register(jobs):
+    """Cross-check collected jobs against UK government sponsor register CSV."""
+    gov_sponsors = load_gov_sponsors()
+    if not gov_sponsors:
+        print_lg("Skipping validation — no gov sponsor data loaded.")
+        return
+
+    verified = []
+    not_found = []
+
+    for job in jobs:
+        company = job["company"].strip().lower()
+        # Try exact match first
+        if company in gov_sponsors:
+            verified.append(job)
+            continue
+        # Try partial match — check if company name is contained in any sponsor name or vice versa
+        found = False
+        for sponsor in gov_sponsors:
+            if company in sponsor or sponsor in company:
+                verified.append(job)
+                found = True
+                break
+        if not found:
+            not_found.append(job)
+
+    print_lg(f"\n{'='*80}")
+    print_lg(f"GOV REGISTER VALIDATION")
+    print_lg(f"{'='*80}")
+    print_lg(f"  Verified in gov register:     {len(verified)}/{len(jobs)}")
+    print_lg(f"  NOT found in gov register:    {len(not_found)}/{len(jobs)}")
+
+    if verified:
+        print_lg(f"\n  --- VERIFIED (in gov register) ---")
+        for i, job in enumerate(verified, 1):
+            print_lg(f"  {i}. {job['title']} | {job['company']}")
+            print_lg(f"     {job['link']}")
+
+    if not_found:
+        print_lg(f"\n  --- NOT IN GOV REGISTER ---")
+        for i, job in enumerate(not_found, 1):
+            print_lg(f"  {i}. {job['title']} | {job['company']}")
+            print_lg(f"     {job['link']}")
+
+    fieldnames = ["job_id", "title", "company", "location", "link", "search_term", "collected_at"]
+
+    # Save verified jobs
+    if verified:
+        verified_csv = "visa_sponsor_jobs_verified.csv"
+        with open(verified_csv, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(verified)
+        print_lg(f"\nSaved {len(verified)} gov-verified jobs to {verified_csv}")
+
+    # Save not-found jobs
+    if not_found:
+        not_verified_csv = "not_visa_sponsor_jobs.csv"
+        with open(not_verified_csv, 'w', newline='', encoding='utf-8') as f:
+            writer = csv.DictWriter(f, fieldnames=fieldnames)
+            writer.writeheader()
+            writer.writerows(not_found)
+        print_lg(f"Saved {len(not_found)} unverified jobs to {not_verified_csv}")
+
+
 def main():
     try:
         # Login
@@ -322,6 +408,9 @@ def main():
 
         # Save to CSV
         save_to_csv(jobs)
+
+        # Validate against UK government sponsor register
+        validate_against_gov_register(jobs)
 
     except Exception as e:
         print_lg(f"Error: {e}")
