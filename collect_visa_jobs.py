@@ -249,7 +249,8 @@ def collect_visa_jobs():
                         continue
 
                     # Check detail view for visa sponsor text
-                    is_visa_sponsor = check_visa_in_detail()
+                    # is_visa_sponsor = check_visa_in_detail()  # skipped
+                    is_visa_sponsor = True
 
                     if is_visa_sponsor:
                         job_link = f"https://www.linkedin.com/jobs/view/{job_id}"
@@ -384,6 +385,41 @@ def validate_against_gov_register(jobs):
         not_verified_csv = "not_visa_sponsor_jobs.csv"
         write_csv(not_verified_csv, not_found)
         print_lg(f"Saved {len(not_found)} unverified jobs to {not_verified_csv}")
+
+    # Append verified jobs to batch-input.tsv
+    if verified:
+        append_to_batch_input(verified)
+
+
+BATCH_INPUT_TSV = "/Users/nayangadhari/Desktop/career-ops/batch/batch-input.tsv"
+
+
+def append_to_batch_input(verified_jobs):
+    """Append verified job id and link to batch-input.tsv, skipping duplicates."""
+    existing_ids = set()
+    try:
+        with open(BATCH_INPUT_TSV, 'r', encoding='utf-8') as f:
+            for line in f:
+                parts = line.strip().split('\t')
+                if parts:
+                    existing_ids.add(parts[0])
+    except FileNotFoundError:
+        pass
+
+    new_entries = []
+    for job in verified_jobs:
+        if job["job_id"] not in existing_ids:
+            new_entries.append(job)
+
+    if not new_entries:
+        print_lg("No new entries to add to batch-input.tsv (all already exist).")
+        return
+
+    with open(BATCH_INPUT_TSV, 'a', encoding='utf-8') as f:
+        for job in new_entries:
+            f.write(f"{job['job_id']}\t{job['link']}\n")
+
+    print_lg(f"Appended {len(new_entries)} new entries to {BATCH_INPUT_TSV}")
 
 
 def main():
